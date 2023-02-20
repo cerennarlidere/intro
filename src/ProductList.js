@@ -20,7 +20,7 @@ export default class ProductList extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.props.product.map((product) => (
+            {this.props.products.map((product) => (
               <tr key={product.id}>
                 <th scope="row">{product.id}</th>
                 <td>{product.productName}</td>
@@ -32,7 +32,7 @@ export default class ProductList extends Component {
                     onClick={() => this.props.addToCart(product)}
                     color="info"
                   >
-                    add{" "}
+                    Add to Cart
                   </Button>
                 </td>
               </tr>
